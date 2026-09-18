@@ -21,18 +21,6 @@ A browser-based Etch-a-Sketch drawing application built as part of [The Odin Pro
 - Flexbox
 - DOM Manipulation
 
-## What I Learned
-
-- Creating and manipulating DOM elements with JavaScript.
-- Using event listeners to handle user interactions.
-- Using functions and parameters to avoid repeating code.
-- Using loops to dynamically generate elements.
-- Working with JavaScript closures and per-element state.
-- Dynamically modifying CSS properties with JavaScript.
-- Generating random RGB colors.
-- Using Flexbox for layouts.
-- Handling and validating user input.
-
 ## Project Structure
 
 ```text
