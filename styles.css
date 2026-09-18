@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    border: 0;
+}
+
+.container{
+    display: flex;
+    width: 1008px;
+    height: 1008px;
+    flex-wrap: wrap;
+}
+
+.grid-box{
+    box-sizing: border-box;
+    border:solid black;
+}
