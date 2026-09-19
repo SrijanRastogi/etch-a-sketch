@@ -1,36 +1,41 @@
 const grid = document.querySelector(".container");
 
-function createGrid(userValue) { 
-for(let i = 0; i < userValue ** 2; i++) 
-    {
-        const div = document.createElement("div"); 
-        div.classList.add("grid-box"); 
-        div.style.width = (1008 / userValue) + "px";
-        div.style.height = (1008 / userValue) + "px";
+function createGrid(userValue) {
+    const gridWidth = grid.clientWidth;
+    const gridHeight = grid.clientHeight;
+
+    for (let i = 0; i < userValue ** 2; i++) {
+        const div = document.createElement("div");
+
+        div.classList.add("grid-box");
+
+        div.style.width = (gridWidth / userValue) + "px";
+        div.style.height = (gridHeight / userValue) + "px";
+
         let count = 0;
         let r;
         let g;
         let b;
 
-        div.addEventListener("mouseenter",function() {
+        div.addEventListener("mouseenter", function() {
             count++;
+
             if (count === 1) {
                 r = Math.floor(Math.random() * 256);
                 g = Math.floor(Math.random() * 256);
                 b = Math.floor(Math.random() * 256);
-            }
-
-            else {
+            } else {
                 r = Math.floor(r * 0.9);
                 g = Math.floor(g * 0.9);
-                b = Math.floor(b * 0.9); 
-            } 
-             div.style.backgroundColor = `rgb(${r},${g},${b})`;
+                b = Math.floor(b * 0.9);
+            }
+
+            div.style.backgroundColor = `rgb(${r},${g},${b})`;
         });
-        grid.appendChild(div) ;
+
+        grid.appendChild(div);
     }
 }
-
 
 createGrid(16);
 
